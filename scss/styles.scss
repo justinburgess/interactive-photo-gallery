@@ -1,0 +1,66 @@
+@import "base/index";
+
+// Baguette Styles
+
+.lightbox img {
+    width: 100%;
+    transition: .2s ease-in-out;
+    box-shadow: 0 2px 3px rgba(0,0,0,.2);
+    max-height: 198px;
+    object-fit: cover;
+  }
+
+  // General Layout
+
+  body {
+    display: grid;
+    margin-bottom: 20px;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "header"
+    "main";
+  }
+  header {
+    grid-area: header;
+  }
+  main {
+    grid-area: main;
+  }
+  
+  .search {
+      display: block;
+      margin: 20px auto;
+      padding: 15px 35% 15px 2%;
+  }
+  .container {
+    max-width: 990px;
+    margin: auto;
+  }
+  .rows{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      margin: auto;
+      grid-gap: 20px 10px;
+      .gallery {
+        display: inline-block;
+        margin: auto;
+        max-width: 200px;
+      }
+  }
+
+  // Styling 
+* {
+  font-family: 'Roboto', sans-serif;
+}
+  
+body {
+  background-color: rgb(255, 251, 246);
+}
+
+.search {
+  border: 1px solid rgba(128, 128, 128, 0.253);
+  border-radius: 5px;
+  background-color: rgb(255, 251, 246);
+  color: rgba(147, 153, 153, 0.596);
+  font-size: 12px;
+}
