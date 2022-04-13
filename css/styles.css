@@ -355,10 +355,10 @@ body {
 }
 .search:focus {
   background-color: white;
-  border-color: cornflowerblue;
+  border-color: rgba(74, 140, 255, 0.81);
 }
 .search:focus, .search:hover {
-  box-shadow: inset 0px 0px 6px 0px cornflowerblue;
+  box-shadow: inset 0px 0px 6px 0px rgba(74, 140, 255, 0.81);
 }
 
 /*  
