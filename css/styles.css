@@ -337,56 +337,11 @@ template {
   display: none;
 }
 
-.lightbox img {
-  width: 100%;
-  transition: 0.2s ease-in-out;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-  max-height: 198px;
-  object-fit: cover;
-}
-
-body {
-  display: grid;
-  margin-bottom: 20px;
-  grid-gap: 10px;
-  grid-template-areas: "header" "main";
-}
-
-header {
-  grid-area: header;
-}
-
-main {
-  grid-area: main;
-}
-
-.search {
-  display: block;
-  margin: 20px auto;
-  padding: 15px 35% 15px 2%;
-}
-
-.container {
-  max-width: 990px;
-  margin: auto;
-}
-
-.rows {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  margin: auto;
-  grid-gap: 20px 10px;
-}
-.rows .gallery {
-  display: inline-block;
-  margin: auto;
-  max-width: 200px;
-}
-
-* {
-  font-family: "Roboto", sans-serif;
-}
-
+/*
+==============Custom styling====================*/
+/* 
+*   Colors and Effects
+*/
 body {
   background-color: rgb(255, 251, 246);
 }
@@ -395,8 +350,76 @@ body {
   border: 1px solid rgba(128, 128, 128, 0.253);
   border-radius: 5px;
   background-color: rgb(255, 251, 246);
-  color: rgba(147, 153, 153, 0.596);
+  color: rgb(69, 71, 71);
   font-size: 12px;
+}
+.search:focus {
+  background-color: white;
+  border-color: cornflowerblue;
+}
+.search:focus, .search:hover {
+  box-shadow: inset 0px 0px 6px 0px cornflowerblue;
+}
+
+/*  
+*   Font styling
+*/
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*
+*   General formatting */
+body {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: "header" "main";
+}
+body header {
+  grid-area: header;
+}
+body main {
+  grid-area: main;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+.container .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(248.5px, 1fr));
+  margin: auto;
+  grid-gap: 20px 10px;
+}
+.container .gallery a {
+  display: inline-block;
+  margin: auto;
+  max-width: 200px;
+}
+
+/* 
+*   Image styling
+*/
+.lightbox img {
+  width: 100%;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  max-height: 198px;
+  object-fit: cover;
+}
+.lightbox img:focus, .lightbox img:hover {
+  box-shadow: 0px 5px 6px 0px rgba(74, 140, 255, 0.81);
+}
+
+/*  
+*   Searchbar styling
+*/
+.search {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 35% 15px 2%;
+  max-width: 700px;
 }
 
 /*# sourceMappingURL=styles.css.map */

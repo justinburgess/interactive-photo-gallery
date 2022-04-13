@@ -1,4 +1,11 @@
-const search = new Filter('search', 'data-caption');
-const baguetteBox = require('baguettebox.js');
-baguetteBox.run('.gallery');
-baguetteBox.run('.tz-gallery');
+// Search listener
+
+document.getElementById('search').addEventListener('keyup', search_pictures);
+
+// Lightbox listener
+window.addEventListener('load', function() {
+    baguetteBox.run('.gallery', {
+    buttons:true,
+    fullScreen:true,
+  })
+});
