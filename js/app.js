@@ -6,6 +6,5 @@ document.getElementById('search').addEventListener('keyup', search_pictures);
 window.addEventListener('load', function() {
     baguetteBox.run('.gallery', {
     buttons:true,
-    fullScreen:true,
   })
 });
